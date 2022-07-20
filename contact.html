@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR"
+      crossorigin="anonymous"
+    />
+
+    <title>Animal by Golu</title>
+    <style>
+      .card {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 13x;
+      }
+      /* .carousel slide {
+        height: 100vh;
+        width: 100vw;
+      } */
+      /* #carouselExampleControls {
+        height: 500px;
+        width: 500px; */
+        /* border-radius: 20%; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Animal UI</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Animals
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://source.unsplash.com/500x500/?wildlife"
+                    >Wild</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://www.nationalgeographic.com/animals/article/domesticated-animals"
+                    >Domestic</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img
+        class="d-block mx-auto mb-4"
+        src="data:image/png;base64,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"
+        alt=""
+        width="72"
+        height="57"
+      />
+      <h2>Checkout form</h2>
+      <p class="lead">
+        Below is an example form built entirely with Bootstrap’s form controls.
+        Each required form group has a validation state that can be triggered by
+        attempting to submit the form without completing it.
+      </p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Your cart</span>
+          <span class="badge bg-primary rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Product name</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Second product</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Third item</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Promo code</h6>
+              <small>EXAMPLECODE</small>
+            </div>
+            <span class="text-success">−$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Promo code" />
+            <button type="submit" class="btn btn-secondary">Redeem</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Billing address</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder=""
+                value=""
+                required=""
+              />
+              <div class="invalid-feedback">Valid first name is required.</div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                placeholder=""
+                value=""
+                required=""
+              />
+              <div class="invalid-feedback">Valid last name is required.</div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Username"
+                  required=""
+                />
+                <div class="invalid-feedback">Your username is required.</div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label"
+                >Email <span class="text-muted">(Optional)</span></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="you@example.com"
+              />
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                placeholder="1234 Main St"
+                required=""
+              />
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label"
+                >Address 2 <span class="text-muted">(Optional)</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="address2"
+                placeholder="Apartment or suite"
+              />
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" required="">
+                <option value="">Choose...</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">Please select a valid country.</div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" required="">
+                <option value="">Choose...</option>
+                <option>California</option>
+              </select>
+              <div class="invalid-feedback">Please provide a valid state.</div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Zip</label>
+              <input
+                type="text"
+                class="form-control"
+                id="zip"
+                placeholder=""
+                required=""
+              />
+              <div class="invalid-feedback">Zip code required.</div>
+            </div>
+          </div>
+
+          <hr class="my-4" />
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address" />
+            <label class="form-check-label" for="same-address"
+              >Shipping address is the same as my billing address</label
+            >
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info" />
+            <label class="form-check-label" for="save-info"
+              >Save this information for next time</label
+            >
+          </div>
+
+          <hr class="my-4" />
+
+          <h4 class="mb-3">Payment</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input
+                id="credit"
+                name="paymentMethod"
+                type="radio"
+                class="form-check-input"
+                checked=""
+                required=""
+              />
+              <label class="form-check-label" for="credit">Credit card</label>
+            </div>
+            <div class="form-check">
+              <input
+                id="debit"
+                name="paymentMethod"
+                type="radio"
+                class="form-check-input"
+                required=""
+              />
+              <label class="form-check-label" for="debit">Debit card</label>
+            </div>
+            <div class="form-check">
+              <input
+                id="paypal"
+                name="paymentMethod"
+                type="radio"
+                class="form-check-input"
+                required=""
+              />
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Name on card</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cc-name"
+                placeholder=""
+                required=""
+              />
+              <small class="text-muted">Full name as displayed on card</small>
+              <div class="invalid-feedback">Name on card is required</div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label"
+                >Credit card number</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="cc-number"
+                placeholder=""
+                required=""
+              />
+              <div class="invalid-feedback">Credit card number is required</div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Expiration</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cc-expiration"
+                placeholder=""
+                required=""
+              />
+              <div class="invalid-feedback">Expiration date required</div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cc-cvv"
+                placeholder=""
+                required=""
+              />
+              <div class="invalid-feedback">Security code required</div>
+            </div>
+          </div>
+
+          <hr class="my-4" />
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">
+            Continue to checkout
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">© 2017–2022 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+</div>
